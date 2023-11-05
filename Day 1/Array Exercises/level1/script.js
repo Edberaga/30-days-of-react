@@ -106,5 +106,5 @@ console.log("Remove: ", itCompanies.splice(itCompanies.length - 1, 1));
 console.log("Current Array:", itCompanies);
 
 //23. Remove all IT companies
-console.log("Remove All: ", itCompanies.splice());
+console.log("Remove All: ", itCompanies.splice(0, itCompanies.length));
 console.log("Current Array:", itCompanies);

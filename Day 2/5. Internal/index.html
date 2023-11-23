@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        main {
+            background-color: green;
+            color: white;
+            padding: 20px 10px;
+        }
+
+        footer {
+            text-align: center;
+            
+        }
+
+        footer p {
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!--React Package-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!--React Virtual DOM CDN-->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!--Babel CDN-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const footer = (
+            <footer>
+                <p>Edberaga &copy; 2023. All right reserved</p>
+            </footer>
+        )
+
+        const main = (
+            <main>
+                {footer}
+            </main>
+        )
+
+        const root = document.querySelector("#root");
+
+        ReactDOM.render(main, root);
+    </script>
+</body>
+</html>

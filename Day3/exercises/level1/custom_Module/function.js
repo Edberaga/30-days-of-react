@@ -1,3 +1,3 @@
-export function count (x, y) {
+export function count(x, y) {
     return x + y;
 }

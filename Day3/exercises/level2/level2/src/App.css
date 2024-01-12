@@ -43,6 +43,22 @@ code {
   color: #61dafb;
 }
 
+.skill-tag {
+  background-color: #61dafb;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

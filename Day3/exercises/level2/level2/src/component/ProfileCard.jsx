@@ -1,22 +1,33 @@
 import React from 'react'
 import profilePic from '../images/profile.jpg'
-import skillData from '../data/mySkill.json'
+import skills from '../data/mySkill.json'
 
 const ProfileCard = () => {
   return (
-    <section>
-        <div>
-            <img src={profilePic} alt='profile-picture'/>
-        </div>
-        <h1>Jonnathan Edbert Halim</h1>
-        <h4>Senior Developer, Indonesia</h4>
+    <section 
+      style={{
+        display: 'flex',
+        flexFlow: "column",
+        alignItems: "center"
+      }}
+    >
+      <div 
+      className='profile-img'
+      style={{
+        backgroundImage: `url(${profilePic})`
+      }}
+      />
+      <h1>Jonnathan Edbert Halim</h1>
+      <h4>Senior Developer, Indonesia</h4>
 
-        <div>
-            <h1>SKILLS</h1>
-            {skillData.map((par) => {
-                <span>{par}</span>
-            })}
-        </div>
+      <div>
+        <h1>SKILLS</h1>
+        {skills.skill_list.map((par) => {
+        return (
+          <span className='skill-tag'>{par}</span>
+        )
+        })}
+      </div>
     </section>
   )
 }

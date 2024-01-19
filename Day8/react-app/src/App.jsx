@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import FlagChanger from './component/FlagChanger';
 
 function App() {
   const [color, setColor] = useState("black-bg");
@@ -18,6 +19,7 @@ function App() {
    <div className={`App ${color}`}>
     <h1>State Management Exercises</h1>
     <button onClick={() => changeColor()}>Change Background</button>
+    <FlagChanger/>
    </div>
   )
 }

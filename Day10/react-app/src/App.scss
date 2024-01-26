@@ -1,0 +1,43 @@
+nav {
+  ul li{
+    list-style-type: none;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 5vw;
+  padding: 100px 5vw;
+  div {
+    flex: 1;
+    padding: 10px;
+  }
+}
+
+.image-container {
+  background-color: green;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  img {
+    width: 320px;
+    border-radius: 10px;
+    padding: 50px 10px;
+  }
+}
+
+.skill-tag {
+  background-color: green;
+  padding: 5px 10px;
+}
+
+.contact-form {
+  .input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+}

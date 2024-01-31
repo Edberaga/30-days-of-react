@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 const Form = () => {
   const [values, setValues] = useState({
     username: '',
+    email: '',
+    password: '',
+    password2: '',
   });
 
   const [error, setError] = useState({});
@@ -19,6 +22,21 @@ const Form = () => {
     const newError = {};
     if(!values.username.trim()) {
         newError.username = 'Username is required';
+    } 
+    
+    //validates email
+    if(!values.email.trim()) {
+        newError.email = 'Email is required!';
+    } 
+    
+    //validates password
+    if(!values.password.trim()) {
+        newError.password = 'Password is required!';
+    } 
+    
+    //validates confirm password
+    if(values.password !== values.password2) {
+        newError.password2 = 'Password is not Matched!';
     }
 
     setError(newError);
@@ -49,6 +67,36 @@ const Form = () => {
             onChange={handleChange}
         />
         {error.username && <p>{error.username}</p>}
+
+        <label htmlFor="mail">Email: </label>
+        <input 
+          type="email" 
+          id='mail'
+          name='email'
+          value={values.email}
+          onChange={handleChange}
+        />
+        {error.email && <p>{error.email}</p>}
+
+        <label htmlFor="password">Email: </label>
+        <input 
+          type="password" 
+          id='password'
+          name='password'
+          value={values.password}
+          onChange={handleChange}
+        />
+        {error.password && <p>{error.password}</p>}
+
+        <label htmlFor="password">Email: </label>
+        <input 
+          type="password" 
+          id='password'
+          name='password'
+          value={values.password2}
+          onChange={handleChange}
+        />
+        {error.password2 && <p>{error.password2}</p>}
       </div>
       <p>{values.username}</p>
       <button type="submit">

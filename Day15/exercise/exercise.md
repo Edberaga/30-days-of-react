@@ -24,5 +24,7 @@ What package do you use to fetch data? =>
 firebase
 
 What is the purpose of classnames package? =>
+Its use to perform conditional rendering through classnames...
 
-What is the pupose validator package?
+What is the pupose validator package? => 
+for validating strings

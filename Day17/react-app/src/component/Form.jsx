@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Prompt } from 'react-router-dom';
 
 const FormPage = () => {
   const [formValues, setFormValues] = useState({});
@@ -13,15 +12,13 @@ const FormPage = () => {
 
   const handleSubmit = (e) => {
     // Submit form logic
-    setIsFormDirty(false);
+    if(isFormDirty === false) {
+      alert("You haven't write anything...")
+    }
   };
 
   return (
     <div>
-      <Prompt
-        when={isFormDirty}
-        message="Are you sure you want to leave without saving?"
-      />
       <h1>Form Page</h1>
       <form onSubmit={handleSubmit}>
         <input

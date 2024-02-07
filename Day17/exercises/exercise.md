@@ -15,7 +15,3 @@ example: <Route path='/' element={<Home/>} />
 example: <Prompt message='Are you sure you want to leave?' />
 The prompt also have attributes called 'when' which is used to state a condition, as long if its true then it will perform it, else it doesn't
 example: <Prompt when={hasUnsavedChanges} message="Are you sure you want to leave without saving?" />
-
-example of prompt for when user haven't fill the form:
-
-

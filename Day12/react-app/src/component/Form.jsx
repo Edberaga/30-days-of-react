@@ -27,7 +27,9 @@ const Form = () => {
     //validates email
     if(!values.email.trim()) {
         newError.email = 'Email is required!';
-    } 
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+        newError.email = 'Invalid email format';
+    }
     
     //validates password
     if(!values.password.trim()) {
